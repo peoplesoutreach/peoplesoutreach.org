@@ -11,8 +11,11 @@
   "scripts": {
     "start": "parcel serve src/index.html --public-url / --dist-dir dist",
     "build": "parcel build src/index.html --public-url / --dist-dir dist",
-    "test": "npm run build"
+    "test": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://peoplesoutreach.github.io/peoplesoutreach.org/",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.8",
@@ -20,6 +23,7 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.16.1",
+    "gh-pages": "^6.3.0",
     "parcel": "^2.16.1",
     "svgo": "^4.0.0"
   }
