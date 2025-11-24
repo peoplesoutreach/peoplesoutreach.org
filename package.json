@@ -13,7 +13,7 @@
     "build": "parcel build src/index.html --public-url / --dist-dir dist",
     "test": "npm run build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist --cname peoplesoutreach.org"
   },
   "homepage": "peoplesoutreach.org/",
   "dependencies": {
