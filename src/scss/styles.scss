@@ -79,12 +79,42 @@ $success: #7952b3;
 // @import "~/node_modules/bootstrap/scss/placeholders";
 
 // Helpers
-// @import "~/node_modules/bootstrap/scss/helpers";
+@import "~/node_modules/bootstrap/scss/helpers";
 
 // Utilities
 @import "~/node_modules/bootstrap/scss/utilities/api";
 
 @import "icon-list";
+
+.theme-responsive-text {
+  color: var(--bs-dark);
+}
+
+.theme-responsive-background {
+  background-color: var(--bs-light);
+}
+
+.menu-button {
+  @extend .btn-light;
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme-responsive-background {
+    background-color: var(--bs-dark);
+  }
+  .theme-responsive-text {
+    color: var(--bs-light);
+  }
+}
+
+header {
+  @extend .sticky-top;
+  @extend .theme-responsive-background;
+}
+
+.header-text {
+  @extend .theme-responsive-text;
+}
 
 .main-content {
   min-width: 350px;
