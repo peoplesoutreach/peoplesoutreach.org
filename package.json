@@ -1,24 +1,26 @@
 {
-  "name": "peoplesoutreach.org",
-  "version": "1.0.0",
-  "description": "peoplesoutreach.org",
-  "homepage": "https://github.com/peoplesoutreach/peoplesoutreach.org#readme",
-  "bugs": {
-    "url": "https://github.com/peoplesoutreach/peoplesoutreach.org/issues"
+  "name": "parcel",
+  "description": "Include Bootstrap's source Sass and individual JavaScript plugins with Parcel.",
+  "version": "0.0.0",
+  "private": true,
+  "repository": "twbs/examples",
+  "license": "MIT",
+  "stackblitz": {
+    "startCommand": "npm start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/peoplesoutreach/peoplesoutreach.org.git"
-  },
-  "license": "ISC",
-  "author": "peoplesoutreach",
-  "type": "module",
-  "main": "src/script/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel serve src/index.html --public-url / --dist-dir dist",
+    "build": "parcel build src/index.html --public-url / --dist-dir dist",
+    "test": "npm run build"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.17",
-    "tailwindcss": "^4.1.17"
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
+    "bsky-embed": "^0.2.7"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.1",
+    "parcel": "^2.16.1",
+    "svgo": "^4.0.0"
   }
 }
